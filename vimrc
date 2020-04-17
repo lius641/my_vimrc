@@ -45,6 +45,7 @@ noremap H I
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap n nzz
 noremap N Nzz
+inoremap <S-Tab> <C-v><Tab>
 
 "my setting
 syntax on
@@ -64,7 +65,7 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 set list
-set listchars=tab:>-,trail:.
+set listchars=tab:>--,trail:.
 set autoindent
 set smartindent
 set scrolloff=8
