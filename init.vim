@@ -5,11 +5,11 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-"call plug#begin('~/.vim/plugged')
-"Plug 'sheerun/vim-polyglot'
-"Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown'
-"Plug 'vim-airline/vim-airline'
+call plug#begin('~/.config/nvim/plugged')
+Plug 'sheerun/vim-polyglot'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-airline/vim-airline'
 " Auto Complete
 " Plug 'Valloric/YouCompleteMe'
 " Markdown
@@ -17,11 +17,11 @@ filetype plugin indent on
 "Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
 "Plug 'vimwiki/vimwiki'
 
-"call plug#end()
+call plug#end()
 
-"color delek
+color delek
 
-"my keyboard mapping by 20200425
+"my keyboard mapping
 let mapleader=" "
 
 
@@ -65,7 +65,7 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 set list
-set listchars=tab:>--,trail:.
+"set listchars=tab:>--,trail:.
 set autoindent
 set smartindent
 set scrolloff=8
