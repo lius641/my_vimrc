@@ -1,25 +1,25 @@
-set directory=~/.vim/tmp
-set backupdir=~/.vim/tmp
+"set directory=~/.vim/tmp
+"set backupdir=~/.vim/tmp
 
 filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-call plug#begin('~/.vim/plugged')
-Plug 'sheerun/vim-polyglot'
-Plug 'godlygeek/tabular'
+"call plug#begin('~/.vim/plugged')
+"Plug 'sheerun/vim-polyglot'
+"Plug 'godlygeek/tabular'
 " Plug 'plasticboy/vim-markdown'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 " Auto Complete
 " Plug 'Valloric/YouCompleteMe'
 " Markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
-Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
-Plug 'vimwiki/vimwiki'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
+"Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
+"Plug 'vimwiki/vimwiki'
 
-call plug#end()
+"call plug#end()
 
-color delek
+"color delek
 
 "my keyboard mapping
 let mapleader=" "
