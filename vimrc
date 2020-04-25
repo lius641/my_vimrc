@@ -21,7 +21,7 @@ filetype plugin indent on
 
 "color delek
 
-"my keyboard mapping by 0425
+"my keyboard mapping by 20200425
 let mapleader=" "
 
 
