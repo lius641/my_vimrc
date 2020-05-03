@@ -1,2 +1,2 @@
 # my_vimrc
-my vim config file
+my i3 pc nvim config file
