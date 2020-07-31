@@ -5,11 +5,12 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-"call plug#begin('~/.vim/plugged')
-"Plug 'sheerun/vim-polyglot'
-"Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown'
-"Plug 'vim-airline/vim-airline'
+call plug#begin('~/.vim/plugged')
+Plug 'sheerun/vim-polyglot'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-airline/vim-airline'
+Plug 'flazz/vim-colorschemes'
 " Auto Complete
 " Plug 'Valloric/YouCompleteMe'
 " Markdown
@@ -17,11 +18,12 @@ filetype plugin indent on
 "Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
 "Plug 'vimwiki/vimwiki'
 
-"call plug#end()
+call plug#end()
 
 "color delek
+colorscheme 1989
 
-"my keyboard mapping by 20200425
+"my keyboard mapping
 let mapleader=" "
 
 
@@ -47,6 +49,9 @@ noremap n nzz
 noremap N Nzz
 inoremap <S-Tab> <C-v><Tab>
 
+
+noremap ,cs :let @*=expand("%")<CR>
+noremap ,cl :let @*=expand("%:p")<CR>
 "my setting
 syntax on
 set number
@@ -60,12 +65,12 @@ set incsearch
 exec "nohlsearch"
 set ignorecase
 set smartcase
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
-set list
-set listchars=tab:>--,trail:.
+set nolist
+"set listchars=tab:>--,trail:.
 set autoindent
 set smartindent
 set scrolloff=8
