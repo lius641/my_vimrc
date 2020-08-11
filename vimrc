@@ -1,22 +1,16 @@
-"set directory=~/.vim/tmp
-"set backupdir=~/.vim/tmp
 
 filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
 call plug#begin('~/.vim/plugged')
-Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
-" Auto Complete
-" Plug 'Valloric/YouCompleteMe'
-" Markdown
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
-"Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
-"Plug 'vimwiki/vimwiki'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -26,37 +20,51 @@ colorscheme 1989
 "my keyboard mapping
 let mapleader=" "
 
-
-map <LEADER>k <C-w>j
-map <LEADER>i <C-w>k
-map <LEADER>j <C-w>h
-map <LEADER>l <C-w>l
-
-
-
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize+5<CR>
-map <right> :vertical resize-5<CR>
+noremap <C-w>k <C-w>j
+noremap <C-w>i <C-w>k
+noremap <C-w>j <C-w>h
+noremap <up> :res +5<CR>
+noremap <down> :res -5<CR>
+noremap <left> :vertical resize-5<CR>
+noremap <right> :vertical resize+5<CR>
 
 noremap k j
 noremap j h
 noremap h i
 noremap i k
 noremap H I
+noremap I H
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap n nzz
 noremap N Nzz
 inoremap <S-Tab> <C-v><Tab>
+inoremap <C-b> <left>
+inoremap <C-f> <right>
 
 
-noremap ,cs :let @*=expand("%")<CR>
-noremap ,cl :let @*=expand("%:p")<CR>
+noremap <LEADER>cs :let @*=expand("%")<CR>
+noremap <LEADER>cl :let @*=expand("%:p")<CR>
+
+" fix meta-keys which generate <Esc>a .. <Esc>z
+" for i in range(65,90) + range(97,122)
+for i in [101, 110, 112, 98]
+  let c = nr2char(i)
+  " exec "map \e".c." <M-".c.">"
+  " exec "map! \e".c." <M-".c.">"
+  exec "nmap \e".c." <M-".c.">"
+endfor
+set timeoutlen=350
+set ttimeoutlen=10
+
+
+
+
 "my setting
 syntax on
 set number
 set relativenumber
 set cursorline
+""set cursorcolumn
 set wrap
 set wildmenu
 set showcmd
@@ -70,7 +78,10 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set nolist
-"set listchars=tab:>--,trail:.
+"set autoread
+"set encoding=utf-8
+""set listchars=tab:>--,trail:.
 set autoindent
+set nrformats=
 set smartindent
 set scrolloff=8
