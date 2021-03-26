@@ -19,19 +19,40 @@
 
 ;; My vim keymap
 (evil-define-key nil evil-normal-state-map
-    "i" 'evil-previous-visual-line
-    "k" 'evil-next-visual-line
-    "j" 'evil-backward-char
-    "h" 'evil-insert
-    "H" 'evil-insert-line
-    "I" 'evil-window-top)
+  "i" 'evil-previous-visual-line
+  "k" 'evil-next-visual-line
+  "j" 'evil-backward-char
+  "h" 'evil-insert
+  "H" 'evil-insert-line
+  "I" 'evil-window-top)
+(evil-define-key nil evil-motion-state-map
+  "i" 'evil-previous-visual-line
+  "k" 'evil-next-visual-line
+  "j" 'evil-backward-char
+  "h" 'evil-insert
+  "H" 'evil-insert-line
+  "I" 'evil-window-top)
+(evil-define-key nil evil-visual-state-map
+  "i" 'evil-previous-visual-line
+  "k" 'evil-next-visual-line
+  "j" 'evil-backward-char
+  "H" 'evil-insert
+  "h" 'evil-inner-text-objects-map)
 (evil-define-key nil evil-window-map
-    "I" 'evil-window-move-far-left)
-
-
-;; SAS mode
-;;(add-to-list 'load-path "~/.emacs.d/lisp/")
-;;(require 'init-sas)
+  "J" 'evil-window-move-far-left
+  "j" 'evil-window-left
+  "i" 'evil-window-up
+  "I" 'evil-window-move-very-top
+  "k" 'evil-window-down
+  "K" 'evil-window-move-very-bottom)
+(evil-define-key nil evil-operator-state-map
+  "h" evil-inner-text-objects-map)
 
 ;; ESS
 (require 'ess-site)
+
+
+;; avoid the auto backup file
+(setq make-backup-files nil)
+
+;; My dired keymap
