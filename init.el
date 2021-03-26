@@ -6,7 +6,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil evil-commentary evil-expat)))
+ '(package-selected-packages '(ess evil evil-commentary evil-expat)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,3 +27,11 @@
     "I" 'evil-window-top)
 (evil-define-key nil evil-window-map
     "I" 'evil-window-move-far-left)
+
+
+;; SAS mode
+;;(add-to-list 'load-path "~/.emacs.d/lisp/")
+;;(require 'init-sas)
+
+;; ESS
+(require 'ess-site)
